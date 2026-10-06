@@ -22,11 +22,11 @@ st.markdown(
        box-shadow: 0 10px 30px rgba(0,0,0,.35);}
 .hero h1 {margin:0; color:white; font-size: 2.1rem;}
 .hero p  {margin:.3rem 0 0; color:#fff; opacity:.92;}
-.kpi {border-radius: 16px; padding: 1rem 1.1rem; background: rgba(255,255,255,.06);
+.kpi {border-radius: 16px; padding: .9rem .8rem; background: rgba(255,255,255,.06);
       border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(6px);}
-.kpi .l {font-size:.68rem; letter-spacing:.02em; white-space:nowrap; text-transform:uppercase; color:#9fb6c9;}
-.kpi .v {font-size:1.55rem; font-weight:700; color:#fff; line-height:1.2;}
-.kpi .s {font-size:.8rem; color:#7fd1b9;}
+.kpi .l {font-size:.62rem; letter-spacing:0; white-space:nowrap; text-transform:uppercase; color:#9fb6c9;}
+.kpi .v {font-size:1.3rem; white-space:nowrap; font-weight:700; color:#fff; line-height:1.2;}
+.kpi .s {font-size:.72rem; color:#7fd1b9;}
 .insight {padding:.7rem 1rem; margin:.4rem 0; border-left: 4px solid #ff9966;
           background: rgba(255,255,255,.05); border-radius: 8px; color:#e8f0f7;}
 </style>
@@ -133,7 +133,7 @@ with t1:
     fig.update_yaxes(title_text="Temperature (°C)", secondary_y=False)
     fig.update_yaxes(title_text="Rainfall (mm/day)", secondary_y=True, showgrid=False)
     fig.update_layout(title="Temperature vs rainfall through the year", hovermode="x unified",
-                      legend=dict(orientation="h", y=1.12), **PLOT)
+                      legend=dict(orientation="h", y=-0.15), **PLOT)
     st.plotly_chart(fig, **PW)
 
     mon_rain = by_day.groupby(by_day.index.month).rain.sum()
